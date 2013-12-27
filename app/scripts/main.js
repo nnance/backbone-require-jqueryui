@@ -22,7 +22,6 @@ require.config({
         },
     },
     paths: {
-        modernizr: '../bower_components/modernizr/modernizr',
         jquery: '../bower_components/jquery/jquery',
         jqueryui: '../bower_components/jquery.ui/ui',
         backbone: '../bower_components/backbone/backbone',
@@ -32,12 +31,11 @@ require.config({
 });
 
 require([
-    'modernizr',
     'backbone',
     'routes/main',
     'views/header',
     'views/body'
-], function (Modernizr, Backbone, MainRouter, HeaderView, BodyView) {
+], function (Backbone, MainRouter, HeaderView, BodyView) {
     var header = new HeaderView({el: '.header'});
     var footer = new Backbone.View({el: '.footer'});
     var body = new BodyView({el: '#body'});
